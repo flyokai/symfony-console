@@ -1,0 +1,21 @@
+{
+    "name": "flyokai/symfony-console",
+    "description": "Flyokai enhancement of symfony console",
+    "require": {
+        "symfony/console": "^6",
+        "flyokai/misc": "^1||dev-main",
+        "flyokai/data-mate": "dev-dev@dev"
+    },
+    "minimum-stability": "dev",
+    "license": [
+        "Proprietary"
+    ],
+    "autoload": {
+        "files": [
+            "src/functions.php"
+        ],
+        "psr-4": {
+            "Flyokai\\SymfonyConsole\\": "src/"
+        }
+    }
+}
