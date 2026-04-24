@@ -25,7 +25,7 @@ Enhanced async Symfony Console with input validation, filesystem handling, and g
 | `DirectoryInputValidator` | Validates dir paths, creates if missing (interactive), checks writability |
 | `FileInputValidator` | Validates file paths, handles replacement/creation with parent dirs |
 | `ExistingFileInputValidator` | File must exist + readable (+ writable if flagged) |
-| `CryptKeyValidator` | Validates cryptographic key files via `Wtsergo\Misc\CryptKey` |
+| `CryptKeyValidator` | Validates cryptographic key files via `Flyokai\Misc\CryptKey` |
 | `UriValidator` | URI validation with allowed schemes |
 | `HttpUrlValidator` | HTTPS/HTTP URL validation (extends UriValidator) |
 | `SslCertValidator` | SSL certificate validation (extends CryptKeyValidator) |

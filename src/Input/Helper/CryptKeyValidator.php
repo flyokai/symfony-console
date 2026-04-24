@@ -20,7 +20,7 @@ class CryptKeyValidator
             if (realpath($value)) {
                 $value = realpath($value);
             }
-            new \Wtsergo\Misc\CryptKey($value, $this->passPhrase, $this->keyPermissionsCheck);
+            new \Flyokai\Misc\CryptKey($value, $this->passPhrase, $this->keyPermissionsCheck);
         } catch (\LogicException $e) {
             throw new ValidationException($e->getMessage());
         }
