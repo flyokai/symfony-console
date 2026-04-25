@@ -26,22 +26,26 @@ class CryptKeyValidator
         }
         return $value;
     }
-    public static function createValidatorFactory(?string $passOption=null): \Closure
+    /**
+     * @param bool $keyPermissionsCheck pass false for public material (e.g. SSL cert,
+     *     public RSA/EC key) where the strict 600/640/660 mode check is inappropriate.
+     */
+    public static function createValidatorFactory(?string $passOption=null, bool $keyPermissionsCheck=true): \Closure
     {
-        return function (InputInterface $input) use ($passOption) {
-            return self::createValidatorFromInput($input, $passOption);
+        return function (InputInterface $input) use ($passOption, $keyPermissionsCheck) {
+            return self::createValidatorFromInput($input, $passOption, $keyPermissionsCheck);
         };
     }
-    public static function createValidatorFromInput(InputInterface $input, ?string $passOption=null): \Closure
+    public static function createValidatorFromInput(InputInterface $input, ?string $passOption=null, bool $keyPermissionsCheck=true): \Closure
     {
-        return self::createFromInput($input, $passOption)->validate(...);
+        return self::createFromInput($input, $passOption, $keyPermissionsCheck)->validate(...);
     }
-    public static function createFromInput(InputInterface $input, ?string $passOption=null): self
+    public static function createFromInput(InputInterface $input, ?string $passOption=null, bool $keyPermissionsCheck=true): self
     {
         $passPhrase = null;
         if ($passOption && !empty($input->getOption($passOption))) {
             $passPhrase = $input->getOption($passOption);
         }
-        return new self(passPhrase: $passPhrase);
+        return new self(passPhrase: $passPhrase, keyPermissionsCheck: $keyPermissionsCheck);
     }
 }
