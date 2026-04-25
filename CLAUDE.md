@@ -1,5 +1,7 @@
 # flyokai/symfony-console
 
+> User docs → [`README.md`](README.md) · Agent quick-ref → [`CLAUDE.md`](CLAUDE.md) · Agent deep dive → [`AGENTS.md`](AGENTS.md)
+
 Enhanced async Symfony Console with required arguments/options, filesystem validation, and generic pipeline integration.
 
 See [AGENTS.md](AGENTS.md) for detailed module knowledge.
