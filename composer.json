@@ -3,8 +3,8 @@
     "description": "Flyokai enhancement of symfony console",
     "require": {
         "symfony/console": "^6",
-        "flyokai/misc": "dev-dev@dev",
-        "flyokai/data-mate": "dev-dev@dev"
+        "flyokai/misc": "<1",
+        "flyokai/data-mate": "<1"
     },
     "minimum-stability": "dev",
     "license": [
