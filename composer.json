@@ -4,7 +4,7 @@
     "require": {
         "symfony/console": "^6",
         "flyokai/misc": "<1",
-        "flyokai/data-mate": "<1"
+        "flyokai/data-mate": "^1"
     },
     "minimum-stability": "dev",
     "license": [
