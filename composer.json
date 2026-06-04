@@ -2,9 +2,10 @@
     "name": "flyokai/symfony-console",
     "description": "Flyokai enhancement of symfony console",
     "require": {
-        "symfony/console": "^6",
-        "flyokai/misc": "dev-dev@dev",
-        "flyokai/data-mate": "dev-dev@dev"
+        "symfony/console": "^6 || ^7",
+        "flyokai/misc": "self.version",
+        "flyokai/data-mate": "self.version",
+        "flyokai/generic": "self.version"
     },
     "minimum-stability": "dev",
     "license": [
